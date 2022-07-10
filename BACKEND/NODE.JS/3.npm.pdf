@@ -1,0 +1,22 @@
+But if we want to work with npm package then we want to first write commend------
+            npm init -y    (for initialize all default value)
+            ->it will create one file called package.json
+
+            then we are able to install any npm package by using
+
+            npm install {package name} ->(it created node_modules folder)
+
+            search a package from npm website
+            then read the docs (specially uses part..***)
+
+            ---->folder- (npm)
+
+
+**********************TIPS**************************
+
+
+In your life it's 100% sure that some moment comes when you feel that you are not best on this field now. So you try to ignore this tusk. But if on that moment that you are the best than anyone and say yes to your self then you must learn something new. And you step up your self.
+
+So always take the chance to embracing yourself. and always try to make your situation uncomfortable .
+
+

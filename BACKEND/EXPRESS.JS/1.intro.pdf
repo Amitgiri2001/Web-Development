@@ -1,0 +1,96 @@
+Express :
+    Express is a framework of Node.js that save our time and effort.
+    It allow us to write 5 to 10 time less code then native Node.js.(as vanilla JavaScript and JQuery).
+
+commends:
+    npm init -y
+    npm i Express
+
+code:
+        // Require express module
+        const express=require("express");
+        // initialize app as express
+        const app=express();
+
+        // listening on port 3000
+        app.listen(3000,function(){
+            console.log("Server started on port 3000");
+        });
+
+    get Method:->(when we get / route then the function was triggered. And it send the response)
+        app.get("/",function(req,res){
+            res.send("<h1>Hello </h1>")
+        });
+
+    different route:
+        
+app.get("/about",function(req,res){
+    res.send("Contact me: meanik@001");
+});
+
+app.get("/contact",function(req,res){
+    res.send("Contact us.");
+});
+
+
+<--------------------5th video---------------->
+Now we are going to create web application(calculator)
+rather than only simple static website.(simple static website contain html css js ) and here js run in clint browser but in web application all calculation done in server.
+
+
+<--------------------6th video---------------->
+app.get("/",function(req,res){
+    res.sendFile(__dirname+"/index.html");
+    // __dirname give the current file directory path
+});
+
+index.html file--->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+
+        //(*** method==post(because we want to post the data  and button type submit also...) and action is very important {it defined where to post those data})
+
+
+        <form action="/" method="post">
+            <input type="text" name="num1" placeholder="Enter first number">
+            <input type="text" name="num2" placeholder="Enter Second number">
+            <button type="submit" name="submit">Calculate</button>
+        </form>
+        
+    </body>
+    </html>
+
+
+    *********************Network status code ************
+    100     : Hold on ..
+    200     : All Ok.
+    300     : Go away(Security involve)
+    400     : Clint error
+    500     : Server error(/Provider error)
+
+
+    //for get data from body we want to install body-parser package
+
+    code:
+        const bodyParser=require("body-parser");
+        app.use(bodyParser.urlencoded({extended:true}));
+        //for get form data we use urlencoded({extended:true})
+parseFloat(string) -> to covert float.
+
+
+
+*******************   TIPS  ********************************
+try to teach other people with your own analogy that help you to understand hard coding concept. Or feel free to apply this to another Learning also.
+
+
+
+

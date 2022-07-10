@@ -1,0 +1,26 @@
+*.Node.js works in server and compute the request and send what we wanted. And It allow us to access local files directly.
+
+introduction of Hyper terminal:
+    1.pwd               : print current directory
+    2.cd Desktop/       : change directory to Desktop
+    3.touch index.js    : Create a index.js file in this folder
+
+    4. cd .             : Open this folder in vs code
+    5.node index.js     : Run index.js file
+    6.ls                : list of files and folder that exists this directory.
+
+***.node REPL(Read Evolution Print Loop): that means in hyper or simply vs code terminal we can write js code and execute them by using node commend.
+
+    7.node
+        >console.log("Hello World");
+        o/p:"Hello World"
+        >3+7
+        o/p:10
+        >"Amit " + "Giri"
+        o/p:"Amit Giri"
+        (for exit from REPL we need to run .exit commend or press ctrl+c 2 times)
+    
+*. for working with node.js go to documentation of node.js in nodejs.org
+
+folder-> intro-to_node (here we are doing some native node.js work -> here we don't need to install node_modules at all)
+

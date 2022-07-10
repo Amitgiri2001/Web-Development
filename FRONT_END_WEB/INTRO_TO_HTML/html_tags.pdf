@@ -1,0 +1,40 @@
+
+tags:
+    <> --->this is called opening tag
+      
+    </>   --->this is called closing tag
+
+Some Popular tags:
+    h1 to h6    : for big and small headings.
+    br          : Line break
+<!-- meta tag description for sco purposes and image alt tags -->
+unicode character set for more capability-> UTF-8
+
+
+    <!-- Add download Button -->
+        <a href="some file(pdf)" download>Download</a>
+    <!-- Add another Page -->
+        <a href="contact-me.html">Contact me</a>
+
+***************RESOURCES***************
+// for learn more about tags or js 
+
+    1.MDN
+    2.W3SCHOOL
+    3.DEVDOC.IO
+//for get solution where you get stuck
+
+    4.STACK overflow
+
+//for emoji resources
+    5.UNICODE
+
+//for vector image  
+    6.freepik
+
+
+****************TIPS***********************
+create your goals .
+when the things are getting more harder then you see why you start coding.
+
+form action mailto:meamitgiri2001@gmail.com for open the default mail app for user. 

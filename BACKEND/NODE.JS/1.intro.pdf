@@ -1,0 +1,10 @@
+What is backend?
+    backend is a place where we keep secret our api keys or business logic.
+
+    And along with this it interact with database and create one application that can be served to frontend.
+
+    (*). In this course we are going to use Node.js with express.js as a backend. Because it run using javascript.
+    other backend option are----
+    -> PHP with cakePHP
+    -> Ruby with Rails
+    -> Java with Spring
