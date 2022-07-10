@@ -24,10 +24,16 @@ $ git push -f origin main
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 
 
-*************************************
+******************First push all the data*******************
     git init -b main
     git add .
     git commit -m "First commit"
     git remote add origin  "<REMOTE_URL>"
     git remote -v
     git push -f origin main
+
+****************** Push changes *************************
+
+    git add .
+    git commit -m "Add all changes"
+    git push origin <your branch>
