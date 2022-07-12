@@ -1,3 +1,54 @@
 API: Application Programming Interface
 it allow us to get data from other website database.
+also we can allow to put data into it.
 we request other server using apis.
+
+curl : commend line http request 
+for call api through commend line we need to put curl before the api link.
+
+
+API:
+    for call a api using link we need  to npm install request . that will help us foe doing that.
+
+    code:
+        const request=require("request");
+
+    ->> js object and JSON format is ery similar
+
+    const obj={
+        name:"Amit",
+        roll:2,
+        class:5
+    }
+
+    const json={
+        "name":"Amit",
+        "roll":2,
+        "class:5
+    }
+
+    we can convert obj to json by using JSON.stringify(obj)
+    we can convert json to obj by using JSON.parse(obj)
+
+    ____>> always remember that first we need to convert json data into object before work in it
+
+
+Request setting for api call------------->
+    let base = "https://apiv2.bitcoinaverage.com/indices/global/ticker/";
+
+    //final may be a object that should contain url: and method:
+    let final = base + first + second;
+    request(final, function (err, res, body) {
+        // console.log(res.statusCode);
+        // console.log(body)
+        // result.send(body);
+
+        const obj = JSON.parse(body);
+        console.log( obj.last);
+        console.log(obj.averages.week);
+    });
+
+
+    ---> For get api keys from mailchimp we need to go Account->extra->api key->create one.
+
+    >>>>>>mailchimp.developer for get started
