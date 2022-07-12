@@ -1,0 +1,102 @@
+In this module we are going to learn about git & github version control.
+
+1.how to create your project
+2.version control 
+3.fork a project
+4.marge request
+
+Exit from vi editor:  -> :q or :q!
+
+
+
+*****************Local repository using GIT***************
+
+
+    1.first we want to git init for create local repository.
+            git init
+
+    2.for check status:
+            git status
+
+    3.for add only one file into our repo:
+            git add chap1.txt
+
+    4.for add only all file into our repo:-> go to stages area if we don't commit it then it don't go to local repo.
+
+            git add .
+
+            (->for remote staging area
+                git rm --cached -r .
+            )
+
+    5.for check all our previous commit:
+            git log
+
+    6.for see difference in one or all files:
+            git diff   or
+            git diff chap3.txt
+    
+    7.for add new commit :
+            git commit -m "first commit"
+
+    8.for go backword :
+            git checkout chap1.txt
+            git checkout
+
+
+
+
+************************Github*********************
+…or create a new repository on the command line
+
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main (for change default master branch to main)
+        git remote add origin https://github.com/Amitgiri2001/Story1.git
+        git push -u origin main
+        
+…or push an existing repository(/local repository) from the command line
+
+        git remote add origin https://github.com/Amitgiri2001/Story1.git
+        git branch -M main  (for change default master branch to main)
+        git push -u origin main
+
+
+***********when you want to change****************
+
+        git add .
+        git commit -m "Changes commit"
+        git push origin main
+
+
+**********************Git clone**********************
+just copy the link of this repository and then 
+        git clone "link"
+        git log   (--> for see all commits)
+
+
+
+*******************git branch**************************
+
+        git branch   (for checkout all branches)
+        git branch experimental  (for create one another branches)
+        git checkout main (switch to main branch)
+        git log (for check all commits)
+
+    ->after changing in experimental branch lets add it and commit it
+
+    ->then create one another file into main branch and continue editing and add changes in git
+
+    ->when experimental branch is successful then how to marge it?
+
+        git checkout main
+        git merge experimental
+
+    check this in insight-> network 
+
+
+    **********for fork & merge*************
+    first fork this copy and then edit it-> pull request it -> write some message 
+
+    ->see pull req and then merge it..
