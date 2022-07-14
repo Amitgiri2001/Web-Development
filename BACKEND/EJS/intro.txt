@@ -1,0 +1,135 @@
+_________________________%%% EJS %%%_________________________
+ejs is a template's library .
+
+it makes easy to work with node.js with express
+
+    app.get("/",function(req,res){
+        // conditional rendering using serer code
+        // res.write("hii")
+        const today=new Date()
+        if(today.getDate()==0 || today.getDay()==6){
+            res.write("<p>it's a weekend</p>")
+            res.write("<h1>you hae to work</h1>")
+            res.send()
+        }
+        else{
+            res.sendFile(__dirname+"/index.html")
+        }
+    });
+
+if we want to send different response according to different logic
+
+then we want to create a branch of html for doing this job
+but we can achieve it with template's
+
+Let's learn how-------------->
+
+
+first install ejs using npm 
+then: set the view engine to ejs
+        app.set("view engine","ejs")
+
+it finds the list.ejs in views folder and pass dayName variable into day key
+
+        res.render("lists", { day: dayName })
+
+
+        and in lists.ejs file we accept this dayName as day using marker. And it can be used inside any html tag.
+
+        <%= day %>
+
+
+        Here we can also use js in html by using <% %> tag
+
+            <body>
+                <% if(day=="sunday"){ %>
+                    <h1 style="color: purple;">It is <%= day %></h1>
+                <% }else{ %>
+                    <h1 style="color: rgb(229, 57, 22);">It is <%= day %></h1>
+                <% } %>
+                
+            </body>
+
+
+
+---------------------> scope <----------------------
+if else for while {
+    block scope
+}
+
+in block scope [
+    let , const is local variable
+    but var is a global variable.
+] --> thats why we are recommenced to use let rather than ar
+
+in function {
+    all are local scope
+}
+
+
+we cant access besides the box if it is a local variable.
+
+see app.js file in todoList-v1
+
+how exporting works in ejs-------------------->
+module.exports.getDate=getDate;
+    function getDate(){
+        const today = new Date();
+        
+        let option = {
+            weekday: "long",
+            day: "numeric",
+            month: "long"
+        }
+        let typeOfDay = today.toLocaleTimeString("en-US", option);
+        return typeOfDay;
+    }
+    module.exports.getDay=getDay;
+
+    function getDay(){
+        const today = new Date();
+
+        let option = {
+            weekday: "long"
+        }
+        let typeOfDay = today.toLocaleTimeString("en-US", option);
+        return typeOfDay;
+    }
+
+
+
+    ****precise way of doing that--------
+    
+    exports.getDate=function (){
+        const today = new Date();
+        const option = {
+            weekday: "long",
+            day: "numeric",
+            month: "long"
+        }
+        return today.toLocaleTimeString("en-US", option);
+    }
+    exports.getDay=function (){
+        const today = new Date();
+        const option = {
+            weekday: "long"
+        }
+        return today.toLocaleTimeString("en-US", option);
+    }
+
+
+
+-------------------->IMP<------------------------
+<%- include("partial/header) %>   (for template header and footer  -> iews/partial/header.ejs)
+
+<%= day %>  (accept ariable in ejs file)
+
+<% for(let i=0;i<posts.length;i++){ %>  (for wright js in ejs file)
+
+---------->forEach loop>---------------------
+it takes a anonymous function
+posts.forEach(function(post){
+    if(post.postTitle===title){
+      console.log("match found")
+    }
+  });

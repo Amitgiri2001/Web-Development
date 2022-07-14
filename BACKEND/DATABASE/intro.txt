@@ -1,0 +1,16 @@
+How to store data into internet?
+    we can do that simply using database like 
+    sql or nosql database.
+
+    sql-> structured query language (Relationship)
+    nosql: not only structured query language (No Relationship)
+
+    sql: 1.save data in a table
+        2.vertically scalable
+        3.make good Relationship
+        .ex:MySQL,posteSQL
+
+    nosql: 1.save data in a document json formeted
+        2.Horizontally scalable
+        3.don't make good Relationship
+        .ex:Mongodb,redix
