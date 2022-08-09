@@ -1,0 +1,54 @@
+In this lesson we are going to learn how to deploy a website into Heroku....
+
+Today I am very happy that I am able to deploy one website with knowing all the things.
+
+1.first you want to follow the documentation of heroku for deploy any app.
+
+2.heroku login: press any key to log in heroku using website
+
+3.However, if you have your own existing application that you want to deploy instead, see this article to learn how to prepare it for Heroku deployment.  : click on see this article
+
+4.Create a Procfile : and add the commend how your app will be started.
+
+        like:> web: node app.js
+
+5.Update your port code:
+        
+        const port= process.env.PORT || 3000;
+        app.listen(port, function() {
+        console.log("Server started Successfully");
+        });
+
+6.Update the Local mongoDB connection to cloud serer.
+
+    How to do that ?
+
+        It is also simple go to mongoDB closter and Open any Project:->
+        click connect: -> click connect with your application->copy your connection link->
+        update the Password and do as like that
+
+            mongoose.connect("mongodb+srv://admin-amit:AmitGiri2001@cluster0.vcyqt.mongodb.net/todolistDB", {useNewUrlParser: true});
+
+            last /todolistDB is the database  name and password is->>--- Amit222Giri2001
+
+7. git init :for initialize your app with git
+8.  git add .
+9. git commit -m "Initial Commit"
+10.add this code in your package.json after Lisence
+        "engines": {
+            "node": "14.x"
+        },
+
+        also update th node version above
+
+11.create .gitignore file and add :
+        /node_modules
+        npm-debug.log
+        .DS_Store
+        /*.env
+
+12.heroku create
+
+13.git push hiroku master  :thats all you are successful
+
+

@@ -1,0 +1,29 @@
+some commends and their workings: link..........>>>https://www.mongodb.com/docs/manual/crud/
+    1.show dbs : show all the database that we currently has.
+
+    2.db : current working db
+
+    3.use shopDB : create one new data base named shopDB
+
+    4.db.products.insertOne({
+        name:"pen",
+        id:1,
+        price:1.20
+    })
+    :create the collection named products and add one products
+
+    5.db.collections : for show all collections
+
+    6.do.products.find() :for print all data in products collections
+
+    7.do.products.find({id:1},{name:1,id:0}) first {} for condition and second {} for which field i want to see.
+
+    8.update:
+            db.products.updateOne({id:1},{$set:{price:2.30}})
+    9.delete:
+            db.products.deleteOne({id:1});
+
+    see relationship:
+     image
+
+
