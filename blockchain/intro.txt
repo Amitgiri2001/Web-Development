@@ -4,3 +4,6 @@ What is Web 3.0?
     in web 3.0 : user hae the database.
 
     its the future. the average salary of a Blockchain developer is 120 thousand dollar.
+    
+    
+    seriously github is very very important tool in development;
